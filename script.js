@@ -59,7 +59,7 @@ function startGame() {
   timeUp = false;
   isStarted = true;
 
-  timer.textContent = `0:${timeLimit < 10 ? '0' : ''}${timeLimit}`;
+  timer.textContent = `0:${timeLimit < 10 ? "0" : ""}${timeLimit}`;
 
   const interval = setInterval(() => {
     timeLimit--;
@@ -69,7 +69,7 @@ function startGame() {
       return;
     }
 
-    timer.textContent = `0:${timeLimit < 10 ? '0' : ''}${timeLimit}`;
+    timer.textContent = `0:${timeLimit < 10 ? "0" : ""}${timeLimit}`;
   }, 1000);
 
   peep();
