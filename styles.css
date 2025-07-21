@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background: rgb(226, 192, 0);
+  --primary-text: black;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: radial-gradient(rgb(255, 213, 0), rgb(255, 200, 0), rgb(255, 191, 0));
+}
+
+body {
+  font-size: 1rem;
+  color: var(--primary-text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  text-align: center;
+}
+
+#high-score {
+  position: absolute;
+  top: 1%;
+  right: 2%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-family: cursive;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+  transform: scaleY(1.5);
+  margin: 0 1rem 2rem;
+  width: 100%;
+}
+
+h1 span {
+  padding: 0 1rem;
+  background-color: rgb(255, 230, 0);
+}
+
+#game {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  justify-content: center;
+  max-width: 100%;
+  padding: 0 1rem;
+}
+
+.hole,
+.mole {
+  width: 110px;
+  height: 130px;
+  background-size: cover;
+}
+
+.hole {
+  position: relative;
+  width: 110px;
+  height: 130px;
+  background-image: url("img/hole.png");
+  background-position: bottom center;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.mole {
+  cursor: pointer;
+  position: absolute;
+  bottom: -100%;
+  width: 100%;
+  height: 100%;
+  background-image: url("img/mole.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  transition: all 0.3s;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  height: 40px;
+  width: 120px;
+  border-radius: 2rem;
+  box-shadow: 0 1px 4px black;
+  margin-top: 2rem;
+  letter-spacing: 1px;
+  border: 1px solid black;
+  transition: all 0.1s ease-in-out;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+button:active {
+  transform: scale(1.01);
+}
+
+.up .mole {
+  bottom: 0;
+}
+
+@media (max-width: 486px) {
+  .hole,
+  .mole {
+    width: 90px;
+    height: 100px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+}
