@@ -27,11 +27,15 @@ body {
   text-align: center;
 }
 
-#high-score {
+#high-score, #timer {
   position: absolute;
-  top: 1%;
-  right: 2%;
+  top: 10px;
+  right: 12px;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+#timer {
+  left: 0;
 }
 
 h1 {
@@ -90,22 +94,21 @@ h1 span {
 
 button {
   cursor: pointer;
+  font-size: 1rem;
   background-color: transparent;
   padding: 0.5rem 1rem;
-  height: 40px;
-  width: 120px;
+  height: 50px;
+  width: 140px;
   border-radius: 2rem;
-  box-shadow: 0 1px 4px black;
+  box-shadow: 0 1px 2px black;
   margin-top: 2rem;
   letter-spacing: 1px;
   border: 1px solid black;
-  transition: all 0.1s ease-in-out;
-  will-change: transform;
-  backface-visibility: hidden;
+  transition: all 0.07s ease-in-out;
 }
 
-button:active {
-  transform: scale(1.01);
+button:hover {
+  box-shadow: 0 1px 4px black;;
 }
 
 .up .mole {
