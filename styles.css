@@ -27,17 +27,17 @@ body {
   text-align: center;
 }
 
-#high-score,
-#timer {
-  position: absolute;
-  top: 10px;
-  right: 12px;
+#game-bar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 1rem;
   font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
-#timer {
-  left: 0;
-}
 
 h1 {
   font-family: cursive;
@@ -45,7 +45,7 @@ h1 {
   letter-spacing: 2px;
   font-weight: 600;
   transform: scaleY(1.5);
-  margin: 0 1rem 2rem;
+  margin: 3rem 1rem 2rem;
   width: 100%;
 }
 
@@ -98,7 +98,7 @@ button {
   font-size: 1rem;
   background-color: transparent;
   padding: 0.5rem 1rem;
-  height: 50px;
+  height: 40px;
   width: 140px;
   border-radius: 2rem;
   box-shadow: 0 1px 2px black;
@@ -125,5 +125,23 @@ button:hover {
 
   h1 {
     font-size: 1.4rem;
+  }
+}
+
+@media (max-height: 700px) {
+  .hole,
+  .mole {
+    width: 80px;
+    height: 90px;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  button {
+    height: 40px;
+    width: 120px;
+    font-size: 0.9rem;
   }
 }

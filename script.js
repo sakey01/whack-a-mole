@@ -46,13 +46,6 @@ function whack(e) {
   scoreBoard.innerHTML = score;
 }
 
-function endGame() {
-  timeUp = true;
-  isStarted = false;
-  highScore.textContent = Math.max(score, Number(highScore.textContent));
-  const storedHighScore = localStorage.setItem("highScore", JSON.stringify(highScore.textContent));
-}
-
 function startGame() {
   let timeLimit = 15;
   score = 0;
